@@ -3,10 +3,10 @@ import { TrackService } from "./track.service";
 import { CreateTrackDto } from "./dto/create-track.dto";
 import { UpdateTrackDto } from "./dto/update-track.dto";
 import { FileFieldsInterceptor } from "@nestjs/platform-express";
-import { MyParseIntPipe } from "src/pipe/pipe";
-import { AuthGuard } from "src/guard/guard";
-import { MyLoggingInterceptor } from "src/interceptor/interceptor";
-import { MyHttpExceptionFilter } from "src/filters/filter";
+import { MyParseIntPipe } from "../pipe/pipe";
+import { AuthGuard } from "../guard/guard";
+import { MyLoggingInterceptor } from "../interceptor/interceptor";
+import { MyHttpExceptionFilter } from "../filters/filter";
 
 
 

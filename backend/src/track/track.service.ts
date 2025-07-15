@@ -4,7 +4,7 @@ import { Track } from "./entity/track.entity";
 import { Repository, ILike } from "typeorm";
 import { CreateTrackDto } from "./dto/create-track.dto";
 import { UpdateTrackDto } from "./dto/update-track.dto";
-import { FileService, FileType } from "src/file/file.service";
+import { FileService, FileType } from "../file/file.service";
 
 
 

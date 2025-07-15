@@ -21,7 +21,7 @@
     npm i -D @types/cookie-parser
     ```
 
-4) Для защиты от csrf атак:
+4) Для защиты от csrf атак (не делал):
     ```
     npm i csrf-csrf
     ```
@@ -32,6 +32,17 @@
     npm install --save @nestjs/serve-static
     npm install uuid
     npm install --save-dev @types/uuid
+    ```
+
+6) Для вебсокетов:
+    Так же в postman поменять спобоб запроса на socket.io !!!
+    ```
+    npm i --save @nestjs/websockets @nestjs/platform-socket.io
+    ```
+
+7) Для тестов:
+    ```
+    npm i --save-dev @nestjs/testing
     ```
 
 ### Концепции
@@ -51,8 +62,35 @@ Pipes →
 Сервис → 
 Post-интерцепторы → 
 Фильтры исключений, на уровнях: 
-- глобальном app
-- контроллера
-- метода
+ глобальном app |
+ контроллера |
+ метода
 → 
 Ответ
+
+### Доп.
+
+Также можно добавить swager 
+И реализовать динамические модули для хз чего
+И реализовать ScopeService для создание и дублирования сервисов при инициализированном app
+
+### .env
+
+```
+PORT=5000
+URL_CORS = http://localhost:5000 https://localhost:5000 http://localhost https://localhost
+
+DB_USER=postgres
+DB_PASSWORD=12345
+DB_PORT=5432
+DB_HOST=localhost
+DB_NAME=test
+DEV=true
+
+
+DB_TEST_USER=postgres
+DB_TEST_PASSWORD=12345
+DB_TEST_HOST=localhost
+DB_TEST_PORT=5432
+DB_TEST_NAME=test
+```

@@ -3,7 +3,7 @@ import { TrackController } from "./track.controller";
 import { TrackService } from "./track.service";
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Track } from "./entity/track.entity";
-import { FileService } from "src/file/file.service";
+import { FileService } from "../file/file.service";
 
 
 

@@ -7,6 +7,7 @@ import { ServeStaticModule } from '@nestjs/serve-static';
 import { FileModule } from "./file/file.module";
 import { join } from 'path';
 import { LoggerMiddleware } from "./middleware/middleware";
+import { MyWebsocketModule } from "./websocket/websoket.module";
 
 
 @Module({
@@ -15,7 +16,7 @@ import { LoggerMiddleware } from "./middleware/middleware";
         TypeOrmModule.forRoot({
             type: 'postgres',
             host: process.env.DB_HOST, 
-            port: 5432,
+            port: Number(process.env.DB_PORT),
             username: process.env.DB_USER, 
             password: process.env.DB_PASSWORD, 
             database: process.env.DB_NAME, 
@@ -27,8 +28,9 @@ import { LoggerMiddleware } from "./middleware/middleware";
         }),
         TrackModule,
         FileModule,
+        MyWebsocketModule,
         CoockieModule
-    ]
+    ],
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
